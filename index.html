@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply to Work With AIGabbie</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #1e3a5f;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+        
+        /* Header */
+        .header {
+            background-color: #1e3a5f;
+            padding: 30px 25px;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 5px;
+        }
+        
+        .tagline {
+            font-size: 14px;
+            color: #c9a227;
+            font-style: italic;
+        }
+        
+        /* Intro Section */
+        .intro {
+            padding: 25px;
+            border-bottom: 3px solid #c9a227;
+        }
+        
+        .intro h2 {
+            font-size: 20px;
+            color: #1e3a5f;
+            margin-bottom: 10px;
+        }
+        
+        .intro p {
+            font-size: 15px;
+            color: #555;
+        }
+        
+        /* Form Styles */
+        .form-section {
+            padding: 25px;
+        }
+        
+        .question {
+            margin-bottom: 25px;
+        }
+        
+        .question-label {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e3a5f;
+            margin-bottom: 12px;
+            display: block;
+        }
+        
+        .question-note {
+            font-size: 13px;
+            color: #c9a227;
+            font-style: italic;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        /* Radio & Checkbox Styles */
+        .option {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        
+        .option input[type="radio"],
+        .option input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            margin-top: 2px;
+            accent-color: #c9a227;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+        
+        .option label {
+            font-size: 15px;
+            color: #333;
+            cursor: pointer;
+        }
+        
+        /* Text Input */
+        .text-input {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin-top: 10px;
+            transition: border-color 0.3s;
+        }
+        
+        .text-input:focus {
+            outline: none;
+            border-color: #c9a227;
+        }
+        
+        /* Textarea */
+        .textarea {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            min-height: 120px;
+            resize: vertical;
+            font-family: inherit;
+        }
+        
+        .textarea:focus {
+            outline: none;
+            border-color: #c9a227;
+        }
+        
+        /* Contact Info Section */
+        .contact-section {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-top: 2px solid #eee;
+        }
+        
+        .contact-section h3 {
+            font-size: 16px;
+            color: #1e3a5f;
+            margin-bottom: 15px;
+        }
+        
+        /* Submit Button */
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background-color: #c9a227;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #b08d1f;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #1e3a5f;
+            padding: 20px 25px;
+            text-align: center;
+        }
+        
+        .footer-line {
+            height: 2px;
+            background-color: #c9a227;
+            margin-bottom: 15px;
+        }
+        
+        .footer p {
+            color: white;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .footer a {
+            color: #c9a227;
+            text-decoration: none;
+        }
+        
+        .footer .copyright {
+            font-size: 12px;
+            color: #8899aa;
+            margin-top: 10px;
+        }
+        
+        /* Thank You Message (hidden by default) */
+        .thank-you {
+            display: none;
+            padding: 60px 25px;
+            text-align: center;
+        }
+        
+        .thank-you h2 {
+            font-size: 28px;
+            color: #1e3a5f;
+            margin-bottom: 20px;
+        }
+        
+        .thank-you p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .thank-you .highlight {
+            color: #c9a227;
+            font-weight: bold;
+        }
+        
+        /* Required asterisk */
+        .required {
+            color: #c9a227;
+        }
+        
+        /* Divider */
+        .divider {
+            height: 1px;
+            background-color: #eee;
+            margin: 10px 0 25px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">AIGabbie</div>
+            <div class="tagline">Your 24/7 AI-Powered Office Assistant</div>
+        </div>
+        
+        <!-- Form Content -->
+        <div id="formContent">
+            <!-- Intro -->
+            <div class="intro">
+                <h2>Apply to Work With AIGabbie</h2>
+                <p>We take on a limited number of new clients each month. Complete this short application to see if your business qualifies.</p>
+            </div>
+            
+            <!-- Form -->
+            <form id="applicationForm" class="form-section" action="https://formsubmit.co/support@aigabbie.com" method="POST">
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_subject" value="New AIGabbie Application">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://formsubmit.co/el/thank-you">
+                <input type="hidden" name="_autoresponse" value="Thank you for applying to work with AIGabbie! We've received your application and will review it within 24-48 hours. If you're a good fit, we'll reach out to schedule a quick discovery call. - The AIGabbie Team">
+                
+                <!-- Question 1 -->
+                <div class="question">
+                    <span class="question-label">1. What type of business do you own or manage? <span class="required">*</span></span>
+                    <div class="option">
+                        <input type="radio" id="q1a" name="business_type" value="Car dealership" required>
+                        <label for="q1a">Car dealership</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q1b" name="business_type" value="Dental practice">
+                        <label for="q1b">Dental practice</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q1c" name="business_type" value="Medical practice">
+                        <label for="q1c">Medical practice</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q1d" name="business_type" value="Other">
+                        <label for="q1d">Other</label>
+                    </div>
+                    <input type="text" name="business_type_other" class="text-input" placeholder="If other, please specify...">
+                </div>
+                
+                <div class="divider"></div>
+                
+                <!-- Question 2 -->
+                <div class="question">
+                    <span class="question-label">2. How many locations does your business have? <span class="required">*</span></span>
+                    <div class="option">
+                        <input type="radio" id="q2a" name="locations" value="1 location" required>
+                        <label for="q2a">1 location</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q2b" name="locations" value="2-3 locations">
+                        <label for="q2b">2-3 locations</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q2c" name="locations" value="4-10 locations">
+                        <label for="q2c">4-10 locations</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q2d" name="locations" value="10+ locations">
+                        <label for="q2d">10+ locations</label>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <!-- Question 3 -->
+                <div class="question">
+                    <span class="question-label">3. What's your biggest frustration right now? <span class="required">*</span></span>
+                    <span class="question-note">Select all that apply</span>
+                    <div class="option">
+                        <input type="checkbox" id="q3a" name="frustrations" value="Missing too many calls">
+                        <label for="q3a">We're missing too many calls</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="q3b" name="frustrations" value="Long hold times">
+                        <label for="q3b">Customers complain about long hold times</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="q3c" name="frustrations" value="Staff overwhelmed">
+                        <label for="q3c">Our front desk staff is overwhelmed</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="q3d" name="frustrations" value="Losing leads to competitors">
+                        <label for="q3d">We're losing leads to competitors</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="q3e" name="frustrations" value="After-hours voicemail">
+                        <label for="q3e">After-hours calls go to voicemail</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="q3f" name="frustrations" value="Paying too much">
+                        <label for="q3f">We're paying too much for receptionists or call center</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="q3g" name="frustrations" value="High turnover">
+                        <label for="q3g">High turnover - constantly hiring and training new staff</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="q3h" name="frustrations" value="Inconsistent experience">
+                        <label for="q3h">Inconsistent customer experience</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="q3i" name="frustrations" value="Busy phone lines">
+                        <label for="q3i">Phone lines are always busy</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="q3j" name="frustrations" value="Can't keep up during busy times">
+                        <label for="q3j">We can't keep up during busy times</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="q3k" name="frustrations" value="Callers hang up">
+                        <label for="q3k">Callers get frustrated and hang up</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="q3l" name="frustrations" value="Don't know how many calls we miss">
+                        <label for="q3l">We have no idea how many calls we're missing</label>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <!-- Question 4 -->
+                <div class="question">
+                    <span class="question-label">4. How does your business currently handle incoming calls? <span class="required">*</span></span>
+                    <div class="option">
+                        <input type="radio" id="q4a" name="current_handling" value="One receptionist" required>
+                        <label for="q4a">One receptionist handles everything</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q4b" name="current_handling" value="Multiple staff">
+                        <label for="q4b">Multiple staff members answer phones and book appointments</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q4c" name="current_handling" value="Outsourced call center">
+                        <label for="q4c">We use an outsourced call center service</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q4d" name="current_handling" value="Swamped - calls missed">
+                        <label for="q4d">We're completely swamped - calls get missed constantly</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q4e" name="current_handling" value="Voicemail">
+                        <label for="q4e">Voicemail handles most calls</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q4f" name="current_handling" value="I answer myself">
+                        <label for="q4f">I answer the phones myself</label>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <!-- Question 5 -->
+                <div class="question">
+                    <span class="question-label">5. Do you currently use a CRM or scheduling system? <span class="required">*</span></span>
+                    <div class="option">
+                        <input type="radio" id="q5a" name="crm" value="Yes" required>
+                        <label for="q5a">Yes</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q5b" name="crm" value="No">
+                        <label for="q5b">No</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q5c" name="crm" value="Not sure">
+                        <label for="q5c">I'm not sure</label>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <!-- Question 6 -->
+                <div class="question">
+                    <span class="question-label">6. Are you currently paying for any of the following?</span>
+                    <span class="question-note">Select all that apply</span>
+                    <div class="option">
+                        <input type="checkbox" id="q6a" name="current_payments" value="Receptionist salary">
+                        <label for="q6a">Receptionist salary</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="q6b" name="current_payments" value="Outsourced call center">
+                        <label for="q6b">Outsourced call center or answering service</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="q6c" name="current_payments" value="BDC service">
+                        <label for="q6c">BDC (Business Development Center) service</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="q6d" name="current_payments" value="None">
+                        <label for="q6d">None of the above</label>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <!-- Question 7 -->
+                <div class="question">
+                    <span class="question-label">7. If you could capture EVERY missed call 24/7, what would that be worth to your business each month? <span class="required">*</span></span>
+                    <div class="option">
+                        <input type="radio" id="q7a" name="value" value="Less than $1,000" required>
+                        <label for="q7a">Less than $1,000</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q7b" name="value" value="$1,000 - $5,000">
+                        <label for="q7b">$1,000 - $5,000</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q7c" name="value" value="$5,000 - $10,000">
+                        <label for="q7c">$5,000 - $10,000</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q7d" name="value" value="$10,000+">
+                        <label for="q7d">$10,000+</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q7e" name="value" value="Not sure">
+                        <label for="q7e">I'm not sure</label>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <!-- Question 8 -->
+                <div class="question">
+                    <span class="question-label">8. How soon are you looking to solve this problem? <span class="required">*</span></span>
+                    <div class="option">
+                        <input type="radio" id="q8a" name="timeline" value="Within 30 days" required>
+                        <label for="q8a">Immediately / Within 30 days</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q8b" name="timeline" value="Within 90 days">
+                        <label for="q8b">Within 90 days</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q8c" name="timeline" value="Just researching">
+                        <label for="q8c">Just researching for now</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q8d" name="timeline" value="Not sure">
+                        <label for="q8d">Not sure</label>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <!-- Question 9 -->
+                <div class="question">
+                    <span class="question-label">9. How involved do you want to be in managing your phone system? <span class="required">*</span></span>
+                    <div class="option">
+                        <input type="radio" id="q9a" name="involvement" value="Not at all - done for me" required>
+                        <label for="q9a">Not at all - just handle it for me and send me reports</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q9b" name="involvement" value="Somewhat involved">
+                        <label for="q9b">Somewhat - keep me updated but take the lead</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q9c" name="involvement" value="Very involved">
+                        <label for="q9c">Very involved - I want to manage it myself</label>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <!-- Question 10 -->
+                <div class="question">
+                    <span class="question-label">10. Approximately how many phone calls does your business receive per day? <span class="required">*</span></span>
+                    <div class="option">
+                        <input type="radio" id="q10a" name="call_volume" value="Less than 10" required>
+                        <label for="q10a">Less than 10 calls</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q10b" name="call_volume" value="10-30 calls">
+                        <label for="q10b">10-30 calls</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q10c" name="call_volume" value="30-50 calls">
+                        <label for="q10c">30-50 calls</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q10d" name="call_volume" value="50-100 calls">
+                        <label for="q10d">50-100 calls</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q10e" name="call_volume" value="100+ calls">
+                        <label for="q10e">100+ calls</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q10f" name="call_volume" value="No idea">
+                        <label for="q10f">I have no idea</label>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <!-- Additional Comments -->
+                <div class="question">
+                    <span class="question-label">Anything else you'd like us to know?</span>
+                    <textarea name="additional_comments" class="textarea" placeholder="Tell us about your specific needs or situation..."></textarea>
+                </div>
+                
+                <!-- Contact Info Section -->
+                <div class="contact-section">
+                    <h3>Your Contact Information <span class="required">*</span></h3>
+                    <input type="text" name="name" class="text-input" placeholder="Your Name" required style="margin-bottom: 15px;">
+                    <input type="text" name="business_name" class="text-input" placeholder="Business Name" required style="margin-bottom: 15px;">
+                    <input type="email" name="email" class="text-input" placeholder="Email Address" required style="margin-bottom: 15px;">
+                    <input type="tel" name="phone" class="text-input" placeholder="Phone Number" required>
+                </div>
+                
+                <!-- Submit Button -->
+                <div style="padding: 0 25px 25px 25px;">
+                    <button type="submit" class="submit-btn">SUBMIT APPLICATION</button>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-line"></div>
+            <p><strong>Ready to chat?</strong></p>
+            <p>📞 <a href="tel:4242739714">424-273-9714</a></p>
+            <p>✉️ <a href="mailto:support@aigabbie.com">support@aigabbie.com</a></p>
+            <p>🌐 <a href="https://www.aigabbie.com">www.aigabbie.com</a></p>
+            <p class="copyright">© 2025 AIGabbie. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
